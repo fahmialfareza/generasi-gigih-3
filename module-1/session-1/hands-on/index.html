@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login/Register Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-white dark:bg-gray-900 min-h-screen flex items-center justify-center dark:text-white"
+  >
+    <div
+      class="max-w-md w-full mx-auto p-6 bg-white dark:bg-gray-800 shadow-md rounded-md"
+    >
+      <h2 class="text-2xl font-bold mb-6">Login/Register</h2>
+      <form id="form" class="space-y-4">
+        <div>
+          <label for="email" class="block font-medium">Email</label>
+          <input
+            type="email"
+            id="email"
+            required
+            class="w-full border-gray-300 rounded-md px-3 py-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <label for="password" class="block font-medium">Password</label>
+          <input
+            type="password"
+            id="password"
+            required
+            class="w-full border-gray-300 rounded-md px-3 py-2 mt-1 focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white rounded-md py-2 px-4 hover:bg-blue-600 transition-colors"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
