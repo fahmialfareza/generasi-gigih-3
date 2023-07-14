@@ -7,6 +7,9 @@ import provinces from "./json/province.json" assert { type: "json" };
 export const getProvinceByIDRepo = (id) => {
   // you can imagine this is querying to database
   const province = provinces.find((province) => province.id === Number(id));
+  if (!province) {
+    throw new Error("province_id is not valid");
+  }
 
   return province;
 };

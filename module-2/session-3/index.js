@@ -12,6 +12,12 @@ app.use(express.json());
 // It will call the router, to define the path of "/users" path
 app.use("/users", usersRouter);
 
+app.use((req, res) => {
+  res.status(404).json({
+    message: "not found!",
+  });
+});
+
 // Start the server
 app.listen(3000, () => {
   console.log(`Server running on port 3000`);

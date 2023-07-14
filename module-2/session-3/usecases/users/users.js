@@ -1,5 +1,8 @@
 import { getProvinceByIDRepo } from "../../repositories/provinces/province.js";
-import { getUserByIDRepo } from "../../repositories/users/users.js";
+import {
+  addUserRepo,
+  getUserByIDRepo,
+} from "../../repositories/users/users.js";
 
 // This is business logic to get user detail by id and his/her province
 export const getUserByIDUsecase = (id) => {
@@ -17,4 +20,11 @@ export const getUserByIDUsecase = (id) => {
 
   // It will return the user data and province of user detail data
   return { ...user, province };
+};
+
+export const addUserUsecase = (name, province_id) => {
+  // validate is province_id is valid
+  getProvinceByIDRepo(province_id);
+
+  return addUserRepo(name, province_id);
 };
