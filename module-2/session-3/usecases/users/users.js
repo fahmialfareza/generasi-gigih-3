@@ -12,5 +12,5 @@ export const getUserByIDUsecase = (id) => {
     return null;
   }
 
-  return { ...user, ...province };
+  return { ...user, province };
 };
